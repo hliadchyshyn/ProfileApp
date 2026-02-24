@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { type RootState, setActiveSection } from '../../store';
 import LanguageToggle from '../LanguageToggle';
+import ThemePicker from '../ThemePicker';
 import s from './styles.module.scss';
 
 const SECTIONS = ['hero', 'about', 'experience', 'skills', 'contact'] as const;
@@ -52,7 +53,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <LanguageToggle />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <ThemePicker />
+          <LanguageToggle />
+        </div>
       </div>
     </nav>
   );

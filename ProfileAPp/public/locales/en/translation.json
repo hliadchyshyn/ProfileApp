@@ -11,7 +11,8 @@
     "name": "Ihor Hliadchyshyn",
     "title": "Fullstack Developer",
     "subtitle": "Building modern web applications with React, TypeScript & .NET",
-    "cta": "View My Quest Log"
+    "cta": "View My Quest Log",
+    "downloadCv": "Download CV"
   },
   "about": {
     "heading": "About Me",
@@ -128,6 +129,10 @@
       }
     }
   },
+  "timeline": {
+    "label": "Career Timeline",
+    "present": "Now"
+  },
   "skills": {
     "heading": "Skill Tree",
     "categories": {
@@ -142,6 +147,7 @@
     "subtitle": "Ready for a new quest? Let's connect.",
     "email": "Send Email",
     "linkedin": "LinkedIn Profile",
+    "github": "GitHub",
     "location": "Kyiv, Ukraine"
   }
 }

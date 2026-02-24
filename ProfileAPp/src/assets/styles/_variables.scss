@@ -1,41 +1,44 @@
 :root {
+  // ── Dynamic theme colors (set by JS via applyTheme()) ──
+  // Defaults below are Emerald (hue 160). JS overwrites them on load.
+
   // Base colors
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-bg-tertiary: #1a1a2e;
-  --color-bg-elevated: #16213e;
+  --color-bg-primary:   hsl(160 18% 4%);
+  --color-bg-secondary: hsl(160 16% 6%);
+  --color-bg-tertiary:  hsl(160 14% 9%);
+  --color-bg-elevated:  hsl(160 20% 11%);
 
   // Accent colors
-  --color-accent-primary: #6c63ff;
-  --color-accent-secondary: #a78bfa;
+  --color-accent-primary:   hsl(160 72% 52%);
+  --color-accent-secondary: hsl(160 65% 68%);
   --color-accent-gold: #fbbf24;
-  --color-accent-green: #34d399;
-  --color-accent-cyan: #22d3ee;
+  --color-accent-green:     hsl(160 60% 60%);
+  --color-accent-cyan:      hsl(190 70% 60%);
 
   // Text colors
-  --color-text-primary: #e4e4e7;
-  --color-text-secondary: #a1a1aa;
-  --color-text-tertiary: #71717a;
-  --color-text-accent: #c4b5fd;
+  --color-text-primary:   hsl(160 12% 92%);
+  --color-text-secondary: hsl(160 18% 62%);
+  --color-text-tertiary:  hsl(160 12% 42%);
+  --color-text-accent:    hsl(160 58% 76%);
 
-  // RPG rarity colors
-  --color-rarity-common: #9ca3af;
-  --color-rarity-uncommon: #34d399;
-  --color-rarity-rare: #60a5fa;
-  --color-rarity-epic: #a78bfa;
+  // RPG rarity colors — fixed regardless of theme
+  --color-rarity-common:    #9ca3af;
+  --color-rarity-uncommon:  #34d399;
+  --color-rarity-rare:      #60a5fa;
+  --color-rarity-epic:      #a78bfa;
   --color-rarity-legendary: #fbbf24;
 
   // Borders
-  --color-border: rgba(108, 99, 255, 0.15);
-  --color-border-hover: rgba(108, 99, 255, 0.4);
+  --color-border:       hsl(160 72% 52% / 0.15);
+  --color-border-hover: hsl(160 72% 52% / 0.45);
 
   // Glass
-  --glass-bg: rgba(10, 10, 15, 0.8);
+  --glass-bg:   hsl(160 18% 4% / 0.82);
   --glass-blur: 12px;
 
   // Shadows
-  --shadow-glow: 0 0 20px rgba(108, 99, 255, 0.3);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px hsl(160 72% 52% / 0.32);
+  --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
 
   // Layout
   --section-padding: 100px 0;

@@ -1,0 +1,162 @@
+@use '../../assets/styles/mixins' as *;
+
+.root {
+  margin-bottom: 56px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 56px;
+
+  @include mobile {
+    margin-bottom: 36px;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+/* ── Label pins ────────────────────────────────────────── */
+
+.labelsRow {
+  position: relative;
+  height: 88px;
+  margin-bottom: 4px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.labelPin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.pinHigh {
+  bottom: 0;
+  flex-direction: column-reverse;
+
+  .pinText {
+    margin-bottom: 6px;
+  }
+}
+
+.pinLow {
+  bottom: 0;
+  flex-direction: column-reverse;
+  // offset to stagger heights
+  padding-bottom: 36px;
+}
+
+.pinText {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.pinNarrow .pinText {
+  font-size: 0.625rem;
+}
+
+.pinLine {
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: var(--color-border-hover);
+  flex-shrink: 0;
+}
+
+/* ── Segmented track ───────────────────────────────────── */
+
+.track {
+  display: flex;
+  height: 36px;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 1px;
+  background: var(--color-bg-secondary); // gap color
+
+  @include mobile {
+    height: 28px;
+  }
+}
+
+.segment {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: default;
+  transition: filter 150ms ease, transform 150ms ease;
+
+  &:hover {
+    filter: brightness(1.2);
+    z-index: 2;
+  }
+
+  &:first-child { border-radius: 10px 0 0 10px; }
+  &:last-child  { border-radius: 0 10px 10px 0; }
+}
+
+/* Rarity backgrounds */
+.r_common    { background: var(--color-rarity-common);    opacity: 0.75; }
+.r_uncommon  { background: var(--color-rarity-uncommon);  opacity: 0.85; }
+.r_rare      { background: var(--color-rarity-rare);      opacity: 0.90; }
+.r_epic      { background: var(--color-rarity-epic);      opacity: 0.95; }
+.r_legendary { background: var(--color-rarity-legendary); opacity: 1.00; }
+
+.segLabel {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+  pointer-events: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 16px);
+}
+
+/* ── Year axis ─────────────────────────────────────────── */
+
+.axis {
+  position: relative;
+  height: 28px;
+  margin-top: 6px;
+}
+
+.yearMark {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-tertiary);
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 1px;
+    height: 6px;
+    background: var(--color-border);
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #fff;
+  padding: 28mm 22mm;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header { margin-bottom: 18px; border-bottom: 2px solid #1a1a1a; padding-bottom: 12px; }
+.header h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 3px; }
+.header .title { font-size: 12pt; color: #444; font-weight: 400; margin-bottom: 8px; }
+.contacts { display: flex; gap: 18px; flex-wrap: wrap; font-size: 9pt; color: #333; }
+.contacts span::before { content: ''; }
+
+/* ── Section headings ───────────────────────────────────── */
+.section { margin-top: 16px; }
+.section-title {
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+/* ── Summary ────────────────────────────────────────────── */
+.summary { font-size: 9.5pt; color: #333; line-height: 1.55; }
+
+/* ── Experience ─────────────────────────────────────────── */
+.job { margin-bottom: 12px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; }
+.job-title { font-size: 10pt; font-weight: 700; }
+.job-period { font-size: 8.5pt; color: #555; white-space: nowrap; }
+.job-sub { font-size: 9pt; color: #444; margin-bottom: 4px; }
+.job ul { padding-left: 14px; margin-top: 3px; }
+.job li { font-size: 9pt; color: #333; margin-bottom: 1px; }
+
+/* ── Skills ─────────────────────────────────────────────── */
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px; }
+.skill-group-title { font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 3px; }
+.skill-list { font-size: 9pt; color: #444; }
+
+/* ── Education ──────────────────────────────────────────── */
+.edu-item { margin-bottom: 6px; }
+.edu-title { font-size: 9.5pt; font-weight: 600; }
+.edu-sub { font-size: 9pt; color: #555; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Ihor Hliadchyshyn</h1>
+  <div class="title">Fullstack Developer — React · TypeScript · C#/.NET</div>
+  <div class="contacts">
+    <span>📍 Kyiv, Ukraine</span>
+    <span>✉ i.s.hliadchyshyn@gmail.com</span>
+    <span>🔗 linkedin.com/in/igor-hliadchyshyn-239769101</span>
+    <span>⌥ github.com/hliadchyshyn</span>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section">
+  <div class="section-title">Summary</div>
+  <p class="summary">
+    Fullstack developer with 11+ years in tech, specializing in React, TypeScript, and C#/.NET.
+    I build web applications end-to-end — from responsive interfaces to scalable backend services —
+    and have hands-on experience with third-party API integrations, legacy codebase modernization,
+    and internal tooling that streamlines business operations.
+    Background in business analysis and system design gives me a strong foundation
+    for translating complex requirements into clean, maintainable code.
+  </p>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-title">Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Military Service</div>
+      <div class="job-period">Jun 2024 – Present</div>
+    </div>
+    <div class="job-sub">Armed Forces of Ukraine · Ukraine</div>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Fullstack Developer (C#/React)</div>
+      <div class="job-period">Mar 2020 – Jun 2024 · 4 yrs 4 mos</div>
+    </div>
+    <div class="job-sub">B2B Soft · Kyiv</div>
+    <ul>
+      <li>Built and maintained POS web applications for small-business clients</li>
+      <li>Delivered fullstack features with React on the frontend and .NET on the backend</li>
+      <li>Integrated third-party hardware (pin pads, printers) and external APIs</li>
+      <li>Modernized and modularized legacy codebases to current standards</li>
+      <li>Conducted code reviews and optimized application performance</li>
+      <li>Created internal tools to automate business workflows</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">UX Business Analyst / HTML Developer</div>
+      <div class="job-period">Apr 2019 – Mar 2020 · 11 mos</div>
+    </div>
+    <div class="job-sub">B2B Soft · Kyiv</div>
+    <ul>
+      <li>Designed UX flows and interface layouts for web and mobile projects</li>
+      <li>Built responsive HTML/CSS templates and React components</li>
+      <li>Translated business requirements into functional specifications</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Senior System Analyst</div>
+      <div class="job-period">Nov 2018 – Apr 2019 · 6 mos</div>
+    </div>
+    <div class="job-sub">Wirex · Kyiv</div>
+    <ul>
+      <li>Analyzed data contracts between system components for a fintech platform</li>
+      <li>Authored detailed Business Requirements Documents for complex features</li>
+      <li>Decomposed cross-functional tasks across development teams</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Senior System Analyst</div>
+      <div class="job-period">Mar 2018 – Nov 2018 · 9 mos</div>
+    </div>
+    <div class="job-sub">Nullgravity · Kyiv</div>
+    <ul>
+      <li>Elicited and documented functional and non-functional requirements</li>
+      <li>Designed REST API architecture and JSON schemas</li>
+      <li>Created data models, mind maps, and system documentation</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">CRM Developer / Senior System Analyst</div>
+      <div class="job-period">May 2016 – Mar 2018 · 1 yr 11 mos</div>
+    </div>
+    <div class="job-sub">Banza (Terrasoft/Creatio) · Kyiv</div>
+    <ul>
+      <li>Debugged and extended CRM APIs and BPM systems</li>
+      <li>Designed interface mockups using Axure and Figma</li>
+      <li>Managed product backlog, iteration planning, and user story refinement</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">System Analyst / Reports Developer</div>
+      <div class="job-period">Aug 2015 – May 2016 · 10 mos</div>
+    </div>
+    <div class="job-sub">Teamsoft LLC · Kyiv</div>
+    <ul>
+      <li>Built and optimized SQL reports using the QlikView BI platform</li>
+      <li>Defined and maintained product KPIs</li>
+      <li>Conducted training sessions for end-users</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Head of Lending &amp; Methodology</div>
+      <div class="job-period">Mar 2013 – Aug 2015 · 2 yrs 6 mos</div>
+    </div>
+    <div class="job-sub">Oschadbank · Sumy</div>
+    <ul>
+      <li>Oversaw lending operations across a branch network</li>
+      <li>Developed lending methodology and reporting frameworks</li>
+      <li>Organized training workshops for branch staff</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div>
+      <div class="skill-group-title">Frontend</div>
+      <div class="skill-list">React, TypeScript, JavaScript, HTML/CSS, SCSS, Redux</div>
+    </div>
+    <div>
+      <div class="skill-group-title">Backend</div>
+      <div class="skill-list">C#, .NET Core, Entity Framework, LINQ, MSSQL, MongoDB</div>
+    </div>
+    <div>
+      <div class="skill-group-title">Architecture &amp; Design</div>
+      <div class="skill-list">REST API Design, Microservices, OOP/SOLID, Design Patterns</div>
+    </div>
+    <div>
+      <div class="skill-group-title">Tools &amp; Methods</div>
+      <div class="skill-list">Git, Docker, Jira, Postman, BPMN 2.0/UML, Agile/Scrum</div>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">Education</div>
+
+  <div class="edu-item">
+    <div class="edu-title">Master's in Banking Processes &amp; Technologies</div>
+    <div class="edu-sub">Ukrainian Academy of Banking · 2008–2013</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-title">Frontend Development</div>
+    <div class="edu-sub">Dan.IT Education · 2018–2019</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-title">C# Advanced Topics</div>
+    <div class="edu-sub">Udemy · 2021</div>
+  </div>
+</div>
+
+<!-- LANGUAGES -->
+<div class="section">
+  <div class="section-title">Languages</div>
+  <p class="summary">Ukrainian — Native &nbsp;·&nbsp; English — Upper-Intermediate (B2)</p>
+</div>
+
+</body>
+</html>
