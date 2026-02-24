@@ -1,0 +1,8 @@
+{
+  "editor.unicodeHighlight.allowedLocales": {
+    "uk": true,
+    "ru": true
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false
+}

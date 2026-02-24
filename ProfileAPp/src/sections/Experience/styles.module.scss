@@ -1,0 +1,44 @@
+@use '../../assets/styles/mixins' as *;
+
+.experience {
+  overflow: visible;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-wrap: balance;
+}
+
+.questLine {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-accent-primary);
+  margin-bottom: 56px;
+  letter-spacing: 0.05em;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent-primary),
+    var(--color-accent-gold),
+    transparent
+  );
+  transform: translateX(-50%);
+
+  @include mobile {
+    left: 17px;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix ProfileAPp",
+    "build": "npm run build --prefix ProfileAPp",
+    "preview": "npm run preview --prefix ProfileAPp",
+    "lint": "npm run lint --prefix ProfileAPp"
+  }
+}

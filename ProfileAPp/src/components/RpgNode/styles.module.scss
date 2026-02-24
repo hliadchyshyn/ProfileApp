@@ -1,0 +1,208 @@
+@use '../../assets/styles/mixins' as *;
+
+.node {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+
+  &.left {
+    flex-direction: row;
+    padding-right: calc(50% + 30px);
+
+    @include mobile {
+      padding-right: 0;
+      padding-left: 48px;
+    }
+  }
+
+  &.right {
+    flex-direction: row-reverse;
+    padding-left: calc(50% + 30px);
+
+    @include mobile {
+      flex-direction: row;
+      padding-left: 48px;
+      padding-right: 0;
+    }
+  }
+}
+
+.orb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-rarity-common);
+  z-index: 2;
+  flex-shrink: 0;
+  transition: box-shadow var(--transition-normal);
+
+  @include mobile {
+    left: 0;
+    transform: none;
+    width: 36px;
+    height: 36px;
+  }
+
+  [data-rarity='uncommon'] & {
+    border-color: var(--color-rarity-uncommon);
+    box-shadow: 0 0 12px rgba(52, 211, 153, 0.3);
+  }
+  [data-rarity='rare'] & {
+    border-color: var(--color-rarity-rare);
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.3);
+  }
+  [data-rarity='epic'] & {
+    border-color: var(--color-rarity-epic);
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.3);
+  }
+  [data-rarity='legendary'] & {
+    border-color: var(--color-rarity-legendary);
+    box-shadow: 0 0 16px rgba(251, 191, 36, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+.icon {
+  font-size: 1.125rem;
+
+  @include mobile {
+    font-size: 0.9375rem;
+  }
+}
+
+.card {
+  @include glass;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-glow);
+  }
+
+  &.static {
+    cursor: default;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.company {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rarity {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+
+  [data-rarity='common'] & { color: var(--color-rarity-common); }
+  [data-rarity='uncommon'] & { color: var(--color-rarity-uncommon); }
+  [data-rarity='rare'] & { color: var(--color-rarity-rare); }
+  [data-rarity='epic'] & { color: var(--color-rarity-epic); }
+  [data-rarity='legendary'] & { color: var(--color-rarity-legendary); }
+}
+
+.role {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.period {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: 14px;
+}
+
+.dot {
+  color: var(--color-text-tertiary);
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent-cyan);
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.quests {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeSlideUp 0.3s ease-out;
+
+  li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+
+    &::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      font-size: 0.5rem;
+      top: 6px;
+      color: var(--color-accent-primary);
+    }
+  }
+}
+
+.expandHint {
+  display: block;
+  margin: 12px auto 0;
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-text-secondary);
+  }
+}

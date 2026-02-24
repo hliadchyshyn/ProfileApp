@@ -1,0 +1,10 @@
+@use '../../assets/styles/mixins' as *;
+
+.section {
+  padding: var(--section-padding);
+  min-height: 50vh;
+}
+
+.container {
+  @include container;
+}

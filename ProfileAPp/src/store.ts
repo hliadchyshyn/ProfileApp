@@ -1,24 +1,26 @@
-import { combineReducers, configureStore, EnhancedStore, ThunkDispatch } from '@reduxjs/toolkit';
-import { Action } from 'redux';
+import { configureStore, createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-import { imageReducer } from './features/image/image.slice';
-import { isDevelopment } from './utils/environments';
+interface UiState {
+  activeSection: string;
+}
 
-const rootReducer = combineReducers({
-  image: imageReducer,
+const uiSlice = createSlice({
+  name: 'ui',
+  initialState: { activeSection: 'hero' } as UiState,
+  reducers: {
+    setActiveSection(state, action: PayloadAction<string>) {
+      state.activeSection = action.payload;
+    },
+  },
 });
 
-export type AppState = ReturnType<typeof rootReducer>;
-export type Dispatcher = ThunkDispatch<AppState, void, Action>;
+export const { setActiveSection } = uiSlice.actions;
 
-export const createStore = (props?: { initialState?: AppState | undefined }): EnhancedStore<AppState> =>
-  configureStore({
-    devTools: isDevelopment(),
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        immutableCheck: true,
-        serializableCheck: false,
-      }),
-    preloadedState: props?.initialState || {},
-    reducer: rootReducer,
-  });
+export const store = configureStore({
+  reducer: {
+    ui: uiSlice.reducer,
+  },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
