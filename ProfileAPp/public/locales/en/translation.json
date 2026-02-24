@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Ihor Hliadchyshyn",
+    "title": "Fullstack Developer",
+    "subtitle": "Building modern web applications with React, TypeScript & .NET",
+    "cta": "View My Quest Log"
+  },
+  "about": {
+    "heading": "About Me",
+    "summary": "Fullstack developer with 11+ years in tech, specializing in React, TypeScript, and C#/.NET. I build web applications end-to-end — from responsive interfaces to scalable backend services — and have hands-on experience with third-party API integrations, legacy codebase modernization, and internal tooling that streamlines business operations.",
+    "location": "Kyiv, Ukraine",
+    "languages": "Ukrainian (Native), English (Upper-Intermediate)",
+    "yearsExp": "11+ years in tech",
+    "education": {
+      "heading": "Education",
+      "masters": "Master's in Banking Processes & Technologies",
+      "university": "Ukrainian Academy of Banking (2008–2013)",
+      "frontend": "Frontend Development — DanIT (2018–2019)",
+      "cert": "C# Advanced Topics — Udemy (2021)"
+    }
+  },
+  "experience": {
+    "heading": "Quest Log",
+    "questLine": "Career Quest Line",
+    "entries": {
+      "military": {
+        "company": "Armed Forces of Ukraine",
+        "role": "Military Service",
+        "period": "Jun 2024 – Present",
+        "duration": "",
+        "location": "Ukraine",
+        "quests": []
+      },
+      "b2bsoft": {
+        "company": "B2B Soft",
+        "role": "Fullstack Developer (C#/React)",
+        "period": "Mar 2020 – Jun 2024",
+        "duration": "4 years 4 months",
+        "location": "Kyiv",
+        "quests": [
+          "Built and maintained POS web applications for small-business clients",
+          "Delivered fullstack features with React on the frontend and .NET on the backend",
+          "Integrated third-party hardware (pin pads, printers) and external APIs",
+          "Modernized and modularized legacy codebases to current standards",
+          "Conducted code reviews and optimized application performance",
+          "Created internal tools to automate business workflows"
+        ]
+      },
+      "b2bsoft_early": {
+        "company": "B2B Soft",
+        "role": "UX Business Analyst / HTML Developer",
+        "period": "Apr 2019 – Mar 2020",
+        "duration": "11 months",
+        "location": "Kyiv",
+        "quests": [
+          "Designed UX flows and interface layouts for web and mobile projects",
+          "Built responsive HTML/CSS templates and React components",
+          "Translated business requirements into functional specifications"
+        ]
+      },
+      "wirex": {
+        "company": "Wirex",
+        "role": "Senior System Analyst",
+        "period": "Nov 2018 – Apr 2019",
+        "duration": "6 months",
+        "location": "Kyiv",
+        "quests": [
+          "Analyzed data contracts between system components for a fintech platform",
+          "Authored detailed Business Requirements Documents for complex features",
+          "Decomposed cross-functional tasks across development teams"
+        ]
+      },
+      "nullgravity": {
+        "company": "Nullgravity",
+        "role": "Senior System Analyst",
+        "period": "Mar 2018 – Nov 2018",
+        "duration": "9 months",
+        "location": "Kyiv",
+        "quests": [
+          "Elicited and documented functional and non-functional requirements",
+          "Designed REST API architecture and JSON schemas",
+          "Created data models, mind maps, and system documentation"
+        ]
+      },
+      "banza": {
+        "company": "Banza (Terrasoft/Creatio)",
+        "role": "CRM Developer / Senior System Analyst",
+        "period": "May 2016 – Mar 2018",
+        "duration": "1 year 11 months",
+        "location": "Kyiv",
+        "quests": [
+          "Debugged and extended CRM APIs and BPM systems",
+          "Designed interface mockups using Axure and Figma",
+          "Managed product backlog, iteration planning, and user story refinement"
+        ]
+      },
+      "teamsoft": {
+        "company": "Teamsoft LLC",
+        "role": "System Analyst / Reports Developer",
+        "period": "Aug 2015 – May 2016",
+        "duration": "10 months",
+        "location": "Kyiv",
+        "quests": [
+          "Built and optimized SQL reports using the QlikView BI platform",
+          "Defined and maintained product KPIs",
+          "Conducted training sessions for end-users"
+        ]
+      },
+      "oschadbank": {
+        "company": "Oschadbank",
+        "role": "Head of Lending & Methodology",
+        "period": "Mar 2013 – Aug 2015",
+        "duration": "2 years 6 months",
+        "location": "Sumy",
+        "quests": [
+          "Oversaw lending operations across a branch network",
+          "Developed lending methodology and reporting frameworks",
+          "Organized training workshops for branch staff"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "heading": "Skill Tree",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "architecture": "Architecture",
+      "tools": "Tools & Methods"
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "Ready for a new quest? Let's connect.",
+    "email": "Send Email",
+    "linkedin": "LinkedIn Profile",
+    "location": "Kyiv, Ukraine"
+  }
+}

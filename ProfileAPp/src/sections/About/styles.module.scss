@@ -1,0 +1,83 @@
+@use '../../assets/styles/mixins' as *;
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-wrap: balance;
+}
+
+.grid {
+  display: grid;
+  gap: 40px;
+
+  @include desktop {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+  }
+}
+
+.summary {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+}
+
+.metaIcon {
+  font-size: 1.125rem;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.education {
+  @include glass;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.eduHeading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  margin-bottom: 18px;
+}
+
+.eduList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-primary);
+    }
+  }
+}

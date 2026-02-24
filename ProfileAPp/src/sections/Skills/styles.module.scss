@@ -1,0 +1,39 @@
+@use '../../assets/styles/mixins' as *;
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-wrap: balance;
+}
+
+.categories {
+  display: grid;
+  gap: 40px;
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.category {
+  @include glass;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.catHeading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

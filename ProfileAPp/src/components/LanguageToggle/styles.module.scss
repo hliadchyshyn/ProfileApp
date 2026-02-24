@@ -1,0 +1,28 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: border-color var(--transition-fast);
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+}
+
+.divider {
+  color: var(--color-text-tertiary);
+  margin: 0 1px;
+}
+
+.active {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}

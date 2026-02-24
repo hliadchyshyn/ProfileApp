@@ -1,0 +1,19 @@
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 200;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-gold));
+  transform-origin: left;
+  animation: scaleX linear;
+  animation-timeline: scroll(root);
+  transform: scaleX(0);
+}
+
+@supports not (animation-timeline: scroll()) {
+  .progress {
+    display: none;
+  }
+}
