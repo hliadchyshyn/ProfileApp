@@ -21,6 +21,10 @@ export default function Contact() {
             <span className={s.icon}>in</span>
             <span>{t('contact.linkedin')}</span>
           </a>
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className={s.link}>
+            <span className={s.icon}>⌥</span>
+            <span>{t('contact.github')}</span>
+          </a>
         </div>
 
         <p className={s.location}>📍 {t('contact.location')}</p>

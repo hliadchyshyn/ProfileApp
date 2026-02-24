@@ -5,6 +5,10 @@ import { store } from './store';
 import App from './App';
 import './i18n';
 import './assets/styles/global.scss';
+import { loadSavedTheme } from './utils/theme';
+
+// Apply persisted (or default Emerald) theme before first render
+loadSavedTheme();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
